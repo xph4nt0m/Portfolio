@@ -1,0 +1,264 @@
+/* Style général pour le body et la typographie */
+body {
+  min-height: 100%;
+  margin: 0;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* Style du header */
+header {
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  width: 0%;
+  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
+  height: 10%;
+}
+
+/* Style de la barre de navigation */
+.nav {
+  width: 200px; /* Largeur de la barre de navigation */
+  padding: 20px 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.nav li a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.nav a:hover {
+  transition: transform 0.2s ease;
+  transform: scale(1.2);
+}
+
+/* Changer la couleur de l'onglet actif */
+
+.nav-menu-item a.active {
+  color: #5162ff; /* Couleur pour l'onglet actif */
+}
+
+/* Style du contenu */
+.content {
+  max-width: 100%; /* Largeur maximale du contenu */
+}
+
+.tab-content {
+  display: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2em;
+}
+
+.tab-content:target {
+  display: block;
+}
+
+.tab-content h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 300%;
+  text-align: justify;
+  margin-top: 10%;
+  margin-left: 35%;
+  animation: fadeIn 1s forwards;
+}
+
+.tab-content .auto-typing {
+  color: #5162ff;
+}
+
+.tab-content .section {
+  width: 30%;
+  text-align: justify;
+  margin-left: 35%;
+  margin-top: 8%;
+  animation: fadeIn 1s forwards;
+}
+
+/* Style du tableau des compétences */
+.tab-content .section1 {
+  width: 30%;
+  text-align: justify;
+  margin-left: 35%;
+  margin-top: 4%;
+  animation: fadeIn 1s forwards;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  width: 50%;
+  padding: 13px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td {
+  font-size: 16px;
+}
+
+td img {
+  width: 20%;
+  height: 10%;
+  transition: transform 0.3s ease;
+}
+
+.responsive_design_logo {
+  width: 30%;
+}
+
+td:hover img {
+  transform: scale(1.5);
+}
+
+
+/* Style du footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  width: 100%; /* Occupera toute la largeur */
+  height: 5%;
+  z-index: 1000; /* Assure que le footer est au-dessus des autres éléments */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  transition: transform 0.3s ease;
+}
+
+.github_icon {
+  width: 50px;
+  height: 50px;
+  margin: 30px;
+}
+
+.gmail_icon {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+
+.linkedin_icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.cv_icon {
+  width: 50px;
+  height: 50px;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2) translateY(-20px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styles pour les petits écrans */
+@media all and (max-width: 950px) {
+  .nav {
+    position:static;
+    width: 100%;
+    padding: 10px 0;
+    transform: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1f1f1f;
+    margin-top: 5%;
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+
+  .nav li {
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+
+  .nav li a {
+    padding: 20px 20px;
+  }
+
+  /* Le contenu sera ajusté */
+  .tab-content h2, .tab-content .section, .tab-content .section1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+  }
+
+  .tab-content h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 10%;
+  }
+
+  .tab-content .section, .tab-content .section1 {
+    width: 40%;
+    margin-left:35%;
+    font-size: 0.95em;
+    margin-top: 8%;
+  }
+
+  .tab-content p {
+    width: 100%;
+  }
+
+  /* Le footer sera ajusté */
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+}
+
+

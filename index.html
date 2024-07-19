@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+    </style>
+  </head>
+  <body>
+    <header></header> 
+
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-menu-item"><a href="#accueil" class="active">Accueil</a></li>
+        <li class="nav-menu-item"><a href="#apropos">Skills</a></li>
+        <li class="nav-menu-item"><a href="#projets">Projets</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div id="accueil" class="tab-content default">
+        <h2>Je suis <span class="auto-typing"></span></h2>
+        <div class="section">
+          <p>
+            Passionné par la tech, des jeux vidéos à la blockchain, je suis
+            déterminé à explorer le développement web. <br />
+            <br />
+            <br />
+            Mon objectif est de continuer à apprendre et à me perfectionner dans ce domaine dynamique et en constante évolution. <br />
+            <br />
+            <br />
+            À la recherche d'une opportunité en tant qu'apprenti développeur
+            web, je suis enthousiaste à l'idée de rejoindre une structure
+            dynamique où je pourrai contribuer et évoluer dans un environnement
+            favorisant l'innovation numérique.
+          </p>
+        </div>
+      </div>
+      <div id="apropos" class="tab-content">
+        <h2>Skills</h2>
+        <div class="section1">
+          <table>
+            <tr>
+              <th>Compétence</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><img src="assets/html.png" alt="HTML Logo"/></td>
+              <td>Structuration de pages web avec balises HTML.</td>
+            </tr>
+            <tr>
+              <td><img src="assets/css.png" alt="CSS Logo" /></td>
+              <td>Stylisation et mise en page des sites web avec CSS.</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets/responsive_design.png" class="responsive_design_logo" alt="Responsive design Logo" />
+              </td>
+              <td>
+                Adaptation des sites aux différents appareils et tailles
+                d'écran.
+              </td>
+            </tr>
+            <tr>
+              <td><img src="assets/github.svg" alt="Github Logo" /></td>
+              <td>Suivi des modifications et partage de code avec Git.</td>
+            </tr>
+            <tr>
+              <td><img src="assets/vscode.png" alt="VSCode Logo" /></td>
+              <td>Utilisation d'éditeurs comme Visual Studio Code.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="projets" class="tab-content">
+        <h2>Projets</h2>
+        <div class="section">
+          <p>En construction.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="social-icons">
+        <a href="mailto:sofian.azougarh@gmail.com">
+          <img src="assets/gmail.webp" alt="Gmail" class="gmail_icon" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/sofian-azougarh-78b849319/"
+          target="_blank"
+        >
+          <img src="assets/linkedin.png" alt="LinkedIn" class="linkedin_icon" />
+        </a>
+        <a href="https://github.com/xph4nt0m" target="_blank">
+          <img src="assets/github.svg" alt="GitHub" class="github_icon" />
+        </a>
+        <a href="cv.pdf" target="_blank">
+          <img src="assets/cv.svg" alt="CV" class="cv_icon" />
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      let typed = new Typed(".auto-typing", {
+        strings: [
+          "Sofian",
+          "web developer",
+          "créatif",
+          "performant",
+          "le futur",
+        ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+        fadeOut: true,
+        fadeOutClass: "typed-fade-out",
+        fadeOutDelay: 500,
+      });
+    </script>
+  </body>
+</html>
