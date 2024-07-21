@@ -1,19 +1,7 @@
 /* Style général pour le body et la typographie */
 body {
-  min-height: 100%;
-  margin: 0;
   background-color: #1f1f1f;
   color: white;
-}
-
-/* Style du header */
-header {
-  position: fixed;
-  top: 0;
-  padding: 10px;
-  width: 0%;
-  z-index: 1000; /* Assure que le header est au-dessus des autres éléments */
-  height: 10%;
 }
 
 /* Style de la barre de navigation */
@@ -34,7 +22,6 @@ header {
 
 .nav li {
   text-align: center;
-  margin-bottom: 50px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   font-size: 1.5em;
@@ -59,9 +46,6 @@ header {
 }
 
 /* Style du contenu */
-.content {
-  max-width: 100%; /* Largeur maximale du contenu */
-}
 
 .tab-content {
   display: none;
@@ -88,8 +72,6 @@ header {
 
 .tab-content .section {
   width: 30%;
-  text-align: justify;
-  margin-left: 35%;
   margin-top: 8%;
   animation: fadeIn 1s forwards;
 }
@@ -139,7 +121,6 @@ td:hover img {
   transform: scale(1.5);
 }
 
-
 /* Style du footer */
 footer {
   position: fixed;
@@ -187,6 +168,7 @@ footer {
 .cv_icon {
   width: 50px;
   height: 50px;
+  margin-right: px;
 }
 
 .social-icons a:hover img {
@@ -205,20 +187,17 @@ footer {
 /* Styles pour les petits écrans */
 @media all and (max-width: 950px) {
   .nav {
-    position:static;
-    width: 100%;
+    position: relative;
+    top: 10px;
     padding: 10px 0;
     transform: none;
     display: flex;
-    justify-content: space-around;
     background-color: #1f1f1f;
-    margin-top: 5%;
   }
 
   .nav ul {
     display: flex;
     justify-content: space-around;
-    width: 50%;
   }
 
   .nav li {
@@ -231,9 +210,10 @@ footer {
   }
 
   /* Le contenu sera ajusté */
-  .tab-content h2, .tab-content .section, .tab-content .section1 {
+  .tab-content h2,
+  .tab-content .section,
+  .tab-content .section1 {
     margin-left: 10%;
-    margin-right: 10%;
     width: auto;
   }
 
@@ -243,11 +223,9 @@ footer {
     margin-top: 10%;
   }
 
-  .tab-content .section, .tab-content .section1 {
-    width: 40%;
-    margin-left:35%;
+  .tab-content .section,
+  .tab-content .section1 {
     font-size: 0.95em;
-    margin-top: 8%;
   }
 
   .tab-content p {
@@ -261,4 +239,9 @@ footer {
   }
 }
 
+@media all and (max-height: 750px) {
+  .skill_title {
+    margin: 5px, 0px !important;
+  }
 
+}
