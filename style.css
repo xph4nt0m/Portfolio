@@ -1,12 +1,11 @@
-/* Style général pour le body et la typographie */
 body {
   background-color: #1f1f1f;
   color: white;
 }
 
-/* Style de la barre de navigation */
 .nav {
-  width: 200px; /* Largeur de la barre de navigation */
+  width: 200px;
+  height: 30%;
   padding: 20px 0;
   position: fixed;
   top: 50%;
@@ -18,6 +17,10 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 }
 
 .nav li {
@@ -39,22 +42,20 @@ body {
   transform: scale(1.2);
 }
 
-/* Changer la couleur de l'onglet actif */
-
 .nav-menu-item a.active {
-  color: #5162ff; /* Couleur pour l'onglet actif */
+  color: #5162ff;
 }
-
-/* Style du contenu */
 
 .tab-content {
   display: none;
+  flex-direction: column;
+  align-items: center;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2em;
 }
 
 .tab-content:target {
-  display: block;
+  display: flex;
 }
 
 .tab-content h2 {
@@ -62,7 +63,6 @@ body {
   font-size: 300%;
   text-align: justify;
   margin-top: 10%;
-  margin-left: 35%;
   animation: fadeIn 1s forwards;
 }
 
@@ -76,11 +76,9 @@ body {
   animation: fadeIn 1s forwards;
 }
 
-/* Style du tableau des compétences */
 .tab-content .section1 {
   width: 30%;
   text-align: justify;
-  margin-left: 35%;
   margin-top: 4%;
   animation: fadeIn 1s forwards;
 }
@@ -121,57 +119,48 @@ td:hover img {
   transform: scale(1.5);
 }
 
-/* Style du footer */
 footer {
   position: fixed;
   bottom: 0;
-  padding: 10px;
-  width: 100%; /* Occupera toute la largeur */
+  width: 100%;
   height: 5%;
-  z-index: 1000; /* Assure que le footer est au-dessus des autres éléments */
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-.social-icons {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100%;
+  justify-content: space-around;
+}
+.left {
+  margin-left: 20%;
+}
+.right {
+  margin-right: 20%;
 }
 
-.social-icons a {
-  margin: 0 10px;
-}
-
-.social-icons img {
+footer img {
   transition: transform 0.3s ease;
 }
 
 .github_icon {
   width: 50px;
   height: 50px;
-  margin: 30px;
 }
 
 .gmail_icon {
   width: 80px;
   height: 80px;
-  margin: 10px;
 }
 
 .linkedin_icon {
   width: 50px;
   height: 50px;
-  margin: 10px;
 }
 
 .cv_icon {
   width: 50px;
   height: 50px;
-  margin-right: px;
 }
 
-.social-icons a:hover img {
+footer a:hover img {
   transform: scale(1.2) translateY(-20px);
 }
 
@@ -184,18 +173,18 @@ footer {
   }
 }
 
-/* Styles pour les petits écrans */
 @media all and (max-width: 950px) {
   .nav {
     position: relative;
     top: 10px;
     padding: 10px 0;
     transform: none;
-    display: flex;
     background-color: #1f1f1f;
+    width: 100%;
   }
 
   .nav ul {
+    flex-direction: row;
     display: flex;
     justify-content: space-around;
   }
@@ -209,7 +198,6 @@ footer {
     padding: 20px 20px;
   }
 
-  /* Le contenu sera ajusté */
   .tab-content h2,
   .tab-content .section,
   .tab-content .section1 {
@@ -232,16 +220,52 @@ footer {
     width: 100%;
   }
 
-  /* Le footer sera ajusté */
-
   .social-icons a {
     margin: 0 10px;
+  }
+
+  .github_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .gmail_icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .linkedin_icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cv_icon {
+    width: 30px;
+    height: 30px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 5%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .right {
+    margin-right: 5%;
+  }
+
+  .left {
+    margin-left: 5%;
   }
 }
 
 @media all and (max-height: 750px) {
   .skill_title {
-    margin: 5px, 0px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
-
 }
