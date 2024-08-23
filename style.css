@@ -114,6 +114,7 @@ td img {
   width: 30%;
 }
 
+
 td:hover img {
   transform: scale(1.5);
 }
